@@ -16,3 +16,14 @@ F:\18-19 HKII\18610SP\Kiem thu PM\Bai tap\BT4b\Buoi07_TinhToan3\obj\Debug\Buoi07
 F:\18-19 HKII\18610SP\Kiem thu PM\Bai tap\BT4b\Buoi07_TinhToan3\obj\Debug\Buoi07_TinhToan3.Form1.resources
 F:\18-19 HKII\18610SP\Kiem thu PM\Bai tap\BT4b\Buoi07_TinhToan3\obj\Debug\Buoi07_TinhToan3.Properties.Resources.resources
 F:\18-19 HKII\18610SP\Kiem thu PM\Bai tap\BT4b\Buoi07_TinhToan3\obj\Debug\Buoi07_TinhToan3.csproj.GenerateResource.Cache
+D:\HK7\KiemThuPhanMem\testing-calculator\bin\Debug\Buoi07_TinhToan3.exe.config
+D:\HK7\KiemThuPhanMem\testing-calculator\bin\Debug\Buoi07_TinhToan3.exe
+D:\HK7\KiemThuPhanMem\testing-calculator\bin\Debug\Buoi07_TinhToan3.pdb
+D:\HK7\KiemThuPhanMem\testing-calculator\obj\Debug\Buoi07_TinhToan3.csproj.AssemblyReference.cache
+D:\HK7\KiemThuPhanMem\testing-calculator\obj\Debug\Buoi07_TinhToan3.csproj.SuggestedBindingRedirects.cache
+D:\HK7\KiemThuPhanMem\testing-calculator\obj\Debug\Buoi07_TinhToan3.Form1.resources
+D:\HK7\KiemThuPhanMem\testing-calculator\obj\Debug\Buoi07_TinhToan3.Properties.Resources.resources
+D:\HK7\KiemThuPhanMem\testing-calculator\obj\Debug\Buoi07_TinhToan3.csproj.GenerateResource.cache
+D:\HK7\KiemThuPhanMem\testing-calculator\obj\Debug\Buoi07_TinhToan3.csproj.CoreCompileInputs.cache
+D:\HK7\KiemThuPhanMem\testing-calculator\obj\Debug\Buoi07_TinhToan3.exe
+D:\HK7\KiemThuPhanMem\testing-calculator\obj\Debug\Buoi07_TinhToan3.pdb

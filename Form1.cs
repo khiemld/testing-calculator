@@ -42,9 +42,31 @@ namespace Buoi07_TinhToan3
             if (radCong.Checked) kq = so1 + so2;
             else if (radTru.Checked) kq = so1 - so2;
             else if (radNhan.Checked) kq = so1 * so2;
-            else if (radChia.Checked && so2 != 0) kq = so1 / so2;
+            else if (radChia.Checked) kq = hanldeDiv(so1, so2);
             //Hiển thị kết quả lên trên ô kết quả
             txtKq.Text = kq.ToString();
+        }
+
+        //Tinh Chia
+        private Double hanldeDiv(double so1, double so2)
+        {
+            double kq = 0;
+            //div
+            if (so2 == 0)
+            {
+                //alert
+                DialogResult dr;
+                dr = MessageBox.Show("Số chia phải khác 0", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (dr == DialogResult.OK)
+                    txtSo2.Focus();
+
+            }
+            else
+            {
+                kq = so1 / so2;
+            }
+            return kq;
         }
     }
 }
