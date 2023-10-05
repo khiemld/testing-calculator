@@ -16,3 +16,13 @@ F:\18-19 HKII\18610SP\Kiem thu PM\Bai tap\BT4b\Buoi07_TinhToan3\obj\Debug\Buoi07
 F:\18-19 HKII\18610SP\Kiem thu PM\Bai tap\BT4b\Buoi07_TinhToan3\obj\Debug\Buoi07_TinhToan3.Form1.resources
 F:\18-19 HKII\18610SP\Kiem thu PM\Bai tap\BT4b\Buoi07_TinhToan3\obj\Debug\Buoi07_TinhToan3.Properties.Resources.resources
 F:\18-19 HKII\18610SP\Kiem thu PM\Bai tap\BT4b\Buoi07_TinhToan3\obj\Debug\Buoi07_TinhToan3.csproj.GenerateResource.Cache
+E:\2023-2024\KTPM\testing-calculator\bin\Debug\Buoi07_TinhToan3.exe.config
+E:\2023-2024\KTPM\testing-calculator\bin\Debug\Buoi07_TinhToan3.exe
+E:\2023-2024\KTPM\testing-calculator\bin\Debug\Buoi07_TinhToan3.pdb
+E:\2023-2024\KTPM\testing-calculator\obj\Debug\Buoi07_TinhToan3.csproj.AssemblyReference.cache
+E:\2023-2024\KTPM\testing-calculator\obj\Debug\Buoi07_TinhToan3.Form1.resources
+E:\2023-2024\KTPM\testing-calculator\obj\Debug\Buoi07_TinhToan3.Properties.Resources.resources
+E:\2023-2024\KTPM\testing-calculator\obj\Debug\Buoi07_TinhToan3.csproj.GenerateResource.cache
+E:\2023-2024\KTPM\testing-calculator\obj\Debug\Buoi07_TinhToan3.csproj.CoreCompileInputs.cache
+E:\2023-2024\KTPM\testing-calculator\obj\Debug\Buoi07_TinhToan3.exe
+E:\2023-2024\KTPM\testing-calculator\obj\Debug\Buoi07_TinhToan3.pdb

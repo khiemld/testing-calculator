@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Numerics;
 
 namespace Buoi07_TinhToan3
 {
     public partial class Form1 : Form
     {
+       
         public Form1()
         {
             InitializeComponent();
@@ -34,17 +36,71 @@ namespace Buoi07_TinhToan3
 
         private void btnTinh_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string so1 = txtSo1.Text;
+                string so2 = txtSo2.Text;
+                if( so1.Contains(",") || so1.Contains(".") )
+                {
+                    decimal so1Dec = Convert.ToDecimal(so1);
+                    if (so2.Contains(",") == false && so2.Contains(".") == false)
+                    {
+                        
+                        BigInteger so2Int = BigInteger.Parse(so2);
+                        if (radCong.Checked) txtKq.Text = (so1Dec + Convert.ToDecimal(so2Int)).ToString();
+                        else if (radTru.Checked) txtKq.Text = (so1Dec - Convert.ToDecimal(so2Int)).ToString();
+                        else if (radNhan.Checked) txtKq.Text = (so1Dec * Convert.ToDecimal(so2Int)).ToString();
+                        else if (radChia.Checked && so2Int != 0) txtKq.Text = (so1Dec / Convert.ToDecimal(so2Int)).ToString();
+                    }
+                    else if (so2.Contains(",") || so2.Contains(".")) 
+                    {
+                        decimal so2Dec = decimal.Parse(so2);
+                        if (radCong.Checked) txtKq.Text = (so1Dec + so2Dec).ToString();
+                        else if (radTru.Checked) txtKq.Text = (so1Dec - so2Dec).ToString();
+                        else if (radNhan.Checked) txtKq.Text = (so1Dec * so2Dec).ToString();
+                        else if (radChia.Checked && so2Dec != 0) txtKq.Text = (so1Dec / so2Dec).ToString();
+
+                    }
+                }
+                else if (so1.Contains(",") == false && so1.Contains(".") == false)
+                {
+                    BigInteger so1Int = BigInteger.Parse(so1);
+                    if (so2.Contains(",") == false && so2.Contains(".") == false)
+                    {
+
+                        BigInteger so2Int = BigInteger.Parse(so2);
+                        if (radCong.Checked) txtKq.Text = (so1Int + so2Int).ToString();
+                        else if (radTru.Checked) txtKq.Text = (so1Int - so2Int).ToString();
+                        else if (radNhan.Checked) txtKq.Text = (so1Int * so2Int).ToString();
+                        else if (radChia.Checked && so2Int != 0) txtKq.Text = (so1Int / so2Int).ToString();
+
+                    }
+                    else if (so2.Contains(",") || so2.Contains("."))
+                    {
+                        decimal so2Dec = decimal.Parse(so2);
+                        if (radCong.Checked) txtKq.Text = (decimal.Parse(so1) + so2Dec).ToString();
+                        else if (radTru.Checked) txtKq.Text = (decimal.Parse(so1) - so2Dec).ToString();
+                        else if (radNhan.Checked) txtKq.Text = (decimal.Parse(so1) * so2Dec).ToString();
+                        else if (radChia.Checked && so2Dec != 0) txtKq.Text = (Convert.ToDecimal(so1Int) / so2Dec).ToString();
+                    }
+                }
+                
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.ToString());
+            }
             //lấy giá trị của 2 ô số
-            double so1, so2, kq = 0;
-            so1 = double.Parse(txtSo1.Text);
-            so2 = double.Parse(txtSo2.Text);
+           /* decimal so1, so2, kq = 0;
+            so1 = decimal.Parse(txtSo1.Text);
+            so2 = decimal.Parse(txtSo2.Text);
             //Thực hiện phép tính dựa vào phép toán được chọn
             if (radCong.Checked) kq = so1 + so2;
             else if (radTru.Checked) kq = so1 - so2;
             else if (radNhan.Checked) kq = so1 * so2;
             else if (radChia.Checked && so2 != 0) kq = so1 / so2;
             //Hiển thị kết quả lên trên ô kết quả
-            txtKq.Text = kq.ToString();
+            txtKq.Text = kq.ToString();*/
         }
     }
 }
