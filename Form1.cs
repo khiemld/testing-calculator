@@ -35,9 +35,17 @@ namespace Buoi07_TinhToan3
         private void btnTinh_Click(object sender, EventArgs e)
         {
             //lấy giá trị của 2 ô số
-            double so1, so2, kq = 0;
-            so1 = double.Parse(txtSo1.Text);
-            so2 = double.Parse(txtSo2.Text);
+            double so1=0, so2=0, kq = 0;
+            try
+            {
+                so1 = double.Parse(txtSo1.Text);
+                so2 = double.Parse(txtSo2.Text);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Dữ liệu nhập vào không chứa ký tự và không để trống", "Thông báo",MessageBoxButtons.OK);
+                return;
+            }
             //Thực hiện phép tính dựa vào phép toán được chọn
             if (radCong.Checked) kq = so1 + so2;
             else if (radTru.Checked) kq = so1 - so2;
