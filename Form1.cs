@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Numerics;
+using System.Text.RegularExpressions;
 
 namespace Buoi07_TinhToan3
 {
@@ -159,7 +160,7 @@ namespace Buoi07_TinhToan3
             {
                 if (so1 == "" || so2 == "")
                 {
-                    MessageBox.Show("Dữ liệu nhập vào không chứa ký tự và không để trống", "Thông báo", MessageBoxButtons.OK);
+                    MessageBox.Show("Dữ liệu nhập vào không để trống", "Thông báo", MessageBoxButtons.OK);
                     if(so1 == "")
                     {
                         txtSo1.Focus();
@@ -170,6 +171,11 @@ namespace Buoi07_TinhToan3
                     }
                     
                 }
+
+                /*else if( txtSo1 == "") {
+                    if(txtSo1.Focused)
+                        MessageBox.Show("Dữ liệu nhập vào không để trống", "Thông báo", MessageBoxButtons.OK);
+                }*/
                 else
                 {
                     MessageBox.Show(ex.ToString());
@@ -187,6 +193,62 @@ namespace Buoi07_TinhToan3
             else if (radChia.Checked && so2 != 0) kq = so1 / so2;
             //Hiển thị kết quả lên trên ô kết quả
             txtKq.Text = kq.ToString();*/
+        }
+
+        private void txtSo1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSo1_Click(object sender, EventArgs e)
+        {
+            this.txtSo1.SelectAll();
+        }
+
+        private void txtSo2_Click(object sender, EventArgs e)
+        {
+            this.txtSo2.SelectAll();
+        }
+
+        private Boolean isValidateNumber(string value)
+        {
+            string numberPattern = @"^[0-9]+(,[0-9]+)*(\.[0-9]+)?$";
+            if(Regex.IsMatch(value, numberPattern))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private void txtSo1_Leave(object sender, EventArgs e)
+        {
+            if(this.txtSo1.Text == "")
+            {
+                MessageBox.Show("Dữ liệu nhập vào không để trống", "Thông báo", MessageBoxButtons.OK);
+                this.txtSo1.Focus();
+            }
+
+            if (isValidateNumber(this.txtSo1.Text) == false)
+            {
+                MessageBox.Show("Dữ liệu nhập không chứa ký tự đặc biệt", "Thông báo", MessageBoxButtons.OK);
+                this.txtSo1.Focus();
+            }
+        }
+
+        private void txtSo2_Leave(object sender, EventArgs e)
+        {
+            if(this.txtSo2.Text == "")
+            {
+                MessageBox.Show("Dữ liệu nhập vào không để trống", "Thông báo", MessageBoxButtons.OK);
+                this.txtSo2.Focus();
+            }
+
+            if (isValidateNumber(this.txtSo2.Text) == false)
+            {
+                MessageBox.Show("Dữ liệu nhập không chứa ký tự đặc biệt", "Thông báo", MessageBoxButtons.OK);
+                this.txtSo2.Focus();
+            }
         }
     }
 }
